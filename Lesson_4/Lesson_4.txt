@@ -1,0 +1,128 @@
+Lesson 4 : Functions in JavaScript
+
+1. What is a function?
+    + A function is a block of code designed to perform a task.
+    + You can reuse it whenever you want instead of writing the same code again.
+    + Types of functions:
+        - User-defined Functions
+        - Built-in functions
+
+2. User-defined functions
+    + A function is defined using the function keyword, followed by the function name and parentheses.
+    + The function body is enclosed in curly braces {}.
+    + Example:
+        function greet() {
+            console.log("Hello, World!");
+        }
+    + To call a function, use the function name followed by parentheses.
+    + Example:
+        greet(); // Output: Hello, World!
+
+3. Built-in functions
+    + JavaScript has many built-in functions that you can use to perform various tasks.
+    + Example:
+        console.log("Hello, World!"); // Output: Hello, World!
+        Math.sqrt(16); // Output: 4
+        "Hello".toUpperCase(); // Output: HELLO
+
+4. Declaring a function
+    + There are two ways to declare a function in JavaScript:
+        - Function declaration
+        - Function expression
+
+5. Function declaration
+    + A function declaration is defined using the function keyword, followed by the function name and parentheses.
+    + The function body is enclosed in curly braces {}.
+    + Example:
+        function greet() {
+            console.log("Hello, World!");
+        }
+    + To call a function, use the function name followed by parentheses.
+    + Example:
+        greet(); // Output: Hello, World!
+
+6. Function expression
+    + A function expression is defined using the function keyword, followed by the function name and parentheses.
+    + The function body is enclosed in curly braces {}.
+    + Example:
+        const greet = function() {
+            console.log("Hello, World!");
+        };
+    + To call a function, use the function name followed by parentheses.
+    + Example:
+        greet(); // Output: Hello, World!
+
+7. Parameters and arguments
+    + Parameters are variables that are defined in the function declaration and are used to receive values passed to the function when it is called.
+    + Arguments are the values passed to the function when it is called.
+    + Example:
+        function greet(name) {
+            console.log("Hello, " + name + "!");
+    }
+    + Example:
+        greet("John"); // Output: Hello, John!
+
+8. Default Parameters
+    + Default parameters are used to provide a default value for a parameter if no argument is passed to the function.
+    + Example:
+        function greet(name = "World") {
+            console.log("Hello, " + name + "!");
+        }
+    + Example:
+        greet(); // Output: Hello, World!
+        greet("John"); // Output: Hello, John!
+
+9. Rest Parameters
+    + Rest parameters are used to represent an indefinite number of arguments as an array.
+    + Example:
+        function sum(...numbers) {
+            return numbers.reduce((total, number) => total + number, 0);
+        }
+    + Example:
+        sum(1, 2, 3, 4, 5); // Output: 15
+
+10. Return Statement
+    + The return statement is used to exit a function and optionally pass a value back to the caller.
+    + Example:
+        function add(a, b) {
+            return a + b;
+        }
+    + Example:
+        let result = add(2, 3); // Output: 5
+
+11. Arrow Functions
+    + Arrow functions are a concise way to write function expressions in JavaScript.
+    + Example:
+        const add = (a, b) => a + b;
+    + Example:
+        let result = add(2, 3); // Output: 5
+
+12. Scope
+    + Scope refers to the accessibility of variables within a program.
+    + There are two types of scope: global scope and local scope.
+    + Global variables are accessible from anywhere in the program, while local variables are only accessible within the block or function in which they are declared.
+    + Example:
+        let globalVariable = "I am global";
+        function myFunction() {
+            let localVariable = "I am local";
+            console.log(globalVariable); // Output: I am global
+            console.log(localVariable); // Output: I am local
+    }
+    + Example:
+        console.log(globalVariable); // Output: I am global
+        console.log(localVariable); // Error: localVariable is not defined
+
+13. Callback Functions
+    + Callback functions are functions that are passed as arguments to other functions and are executed after the completion of the outer function.
+    + Example:
+        function myFunction(callback) {
+            // Do something
+            callback();
+        }
+        function myCallback() {
+            console.log("Callback function executed");
+        }
+        myFunction(myCallback); // Output: Callback function executed
+
+
+
