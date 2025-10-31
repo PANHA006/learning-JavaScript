@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+    <style>
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        .btn-style{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: auto; /* Pushes button to the bottom */
+        }
+    </style>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">JS Learning Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lessons
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Lesson_1/practice/Lesson_1.html">Lesson 1: Introduction to JavaScript</a></li>
+                                <li><a class="dropdown-item" href="Lesson_2/practice/Lesson_2.html">Lesson 2: Variables</a></li>
+                                <li><a class="dropdown-item" href="Lesson_3/practice/Lesson_3.html">Lesson 3: Conditionals</a></li>
+                                <li><a class="dropdown-item" href="Lesson_4/practice/Lesson_4.html">Lesson 4: Loops</a></li>
+                                <li><a class="dropdown-item" href="Lesson_5/practice/Lesson_5.html">Lesson 5: Objects & Arrays</a></li>
+                                <li><a class="dropdown-item" href="Lesson_6/practice/Lesson_6.html">Lesson 6: Functions with Arrays & Objects</a></li>
+                                <li><a class="dropdown-item" href="Lesson_7/practice/Lesson_7.html">Lesson 7: Events & DOM</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <input id="search-bar" class="form-control" type="search" placeholder="Filter lessons..." aria-label="Search">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Welcome to Your JavaScript Journey</h1>
+                <p class="col-md-8 fs-4">This is the central hub for all your JavaScript lessons. Use the navigation bar above to jump to a specific lesson, or choose from the list below.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Lesson 1 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 1: Introduction to JavaScript</h5>
+                        <p class="card-text">Learn the basics of what JavaScript is, why it's important, and how to write your first line of code.</p>
+                        <a href="Lesson_1/practice/Lesson_1.html" class="btn btn-primary btn-style">Go to Lesson 1</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lesson 2 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 2: Variables & Data Types</h5>
+                        <p class="card-text">Discover how to store data in variables and understand the different types of data you can work with in JavaScript.</p>
+                        <a href="Lesson_2/practice/Lesson_2.html" class="btn btn-primary btn-style">Go to Lesson 2</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lesson 3 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 3: Operators & Expressions</h5>
+                        <p class="card-text">Learn how to perform arithmetic operations and create expressions to manipulate data in JavaScript.</p>
+                        <a href="Lesson_3/practice/Lesson_3.html" class="btn btn-primary btn-style">Go to Lesson 3</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lesson 4 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 4: Conditionals & Loops</h5>
+                        <p class="card-text">Learn how to control the flow of your code using conditionals and loops in JavaScript.</p>
+                        <a href="Lesson_4/practice/Lesson_4.html" class="btn btn-primary btn-style">Go to Lesson 4</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lesson 5 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 5: Objects & Arrays</h5>
+                        <p class="card-text">Dive into two fundamental data structures: objects for key-value pairs and arrays for ordered lists.</p>
+                        <a href="Lesson_5/practice/Lesson_5.html" class="btn btn-primary btn-style">Go to Lesson 5</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 6 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 6: Functions with Arrays & Objects</h5>
+                        <p class="card-text">Explore how to pass complex data into functions, process it, and return useful results.</p>
+                        <a href="Lesson_6/practice/Lesson_6.html" class="btn btn-primary btn-style">Go to Lesson 6</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 7 Card -->
+            <div class="col-md-6 col-lg-4 mb-4 lesson-card">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lesson 7: JavaScript Events & DOM</h5>
+                        <p class="card-text">Learn how to make your web pages interactive by manipulating HTML and responding to user actions.</p>
+                        <a href="Lesson_7/practice/Lesson_7.html" class="btn btn-primary btn-style">Go to Lesson 7</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2024 KLS COMPUTER JavaScript Lessons</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Page-specific script for search filter -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBar = document.getElementById('search-bar');
+            const lessonCards = document.querySelectorAll('.lesson-card');
+
+            searchBar.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+
+                lessonCards.forEach(function(card) {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const description = card.querySelector('.card-text').textContent.toLowerCase();
+
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = ''; // Show card
+                    } else {
+                        card.style.display = 'none'; // Hide card
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
