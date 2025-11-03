@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">JS Learning Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_1/practice/Lesson_1.html">Lesson 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_2/practice/Lesson_2.html">Lesson 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_3/practice/Lesson_3.html">Lesson 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_4/practice/Lesson_4.html">Lesson 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../Lesson_5/practice/Lesson_5.html">Lesson 5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_6/practice/Lesson_6.html">Lesson 6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_7/practice/Lesson_7.html">Lesson 7</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5 text-primary">Lesson 5: Object & Arrays in JavaScript</h1>
+
+        <!-- Section 1: Object -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-primary text-white">1. Object</h2>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An object is a collection of key-value pairs.</li>
+                    <li class="list-group-item">The key is always a string.</li>
+                    <li class="list-group-item">The value can be any data type (string, number, boolean, array, another object, etc.).</li>
+                    <li class="list-group-item">An object is created using curly braces <code>{}</code>.</li>
+                    <li class="list-group-item">Object properties can be accessed using dot notation (<code>object.key</code>) or bracket notation (<code>object['key']</code>).</li>
+                </ul>
+                <h4 class="card-title mt-4">syntax of Object</h4>
+                <div class="card-body">
+                    <pre class="bg-light p-3 rounded"><code>let objectName = {
+    key1: value1,
+    key2: value2,
+    // ...
+};
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Example of Object -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-success text-white">2. Example of Object</h2>
+            <div class="card-body">
+                <pre class="bg-light p-3 rounded"><code>var person = {
+    name: "John",
+    age: 30,
+    gender: "male",
+    isMarried: false,
+    children: ["Alice", "Bob"],
+    address: {
+        street: "123 Main St",
+        city: "New York",
+        state: "NY",
+        zip: "10001"
+    }
+};</code></pre>
+                <h4 class="card-title mt-4">Accessing Object Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>console.log(person.name);      // "John"
+console.log(person["age"]);    // 30</code></pre>
+
+                <h4 class="card-title mt-4">Modifying Object Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>person.name = "Jane";
+person["age"] = 25;
+console.log(person);</code></pre>
+
+                <h4 class="card-title mt-4">Adding a New Property</h4>
+                <pre class="bg-light p-3 rounded"><code>person.email = "jane@example.com";
+person["phone"] = "123-456-7890";
+console.log(person);</code></pre>
+
+                <h4 class="card-title mt-4">Deleting a Property</h4>
+                <pre class="bg-light p-3 rounded"><code>delete person.gender;
+delete person["isMarried"];
+console.log(person);</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 3: Real Example -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-info text-dark">3. Real Example Walkthrough</h2>
+            <div class="card-body">
+                <p>Let's use this object for our examples:</p>
+                <pre class="bg-light p-3 rounded"><code>var person = {
+    name: "John",
+    age: 30,
+    gender: "male",
+    isMarried: false,
+    children: ["Alice", "Bob"],
+    address: {
+        street: "123 Main St",
+        city: "New York",
+        state: "NY",
+        zip: "10001"
+    }
+};</code></pre>
+                <h4 class="card-title mt-4">Accessing Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>console.log(person.name);            // "John"
+console.log(person.age);             // 30
+console.log(person.children[0]);     // "Alice"
+console.log(person.address.city);    // "New York"</code></pre>
+
+                <h4 class="card-title mt-4">Modifying Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>person.name = "Jane";
+person.age = 25;
+person.isMarried = true;
+person.children[0] = "Emily";
+person.address.city = "Los Angeles";
+person.address.state = "CA";
+console.(person);</code></pre>
+
+                <h4 class="card-title mt-4">Adding New Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>person.email = "jane@example.com";
+person.phone = "123-456-7890";
+console.log(person);</code></pre>
+
+                <h4 class="card-title mt-4">Deleting Properties</h4>
+                <pre class="bg-light p-3 rounded"><code>delete person.email;
+delete person.phone;
+delete person.isMarried;
+console.log(person);</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 4: Arrays -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-warning text-dark">4. Arrays</h2>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An array stores multiple values in a single variable.</li>
+                    <li class="list-group-item">It is an ordered collection of values.</li>
+                    <li class="list-group-item">An array is created using square brackets <code>[]</code>.</li>
+                    <li class="list-group-item">Elements are accessed by their index, starting from 0.</li>
+                </ul>
+                <h4 class="card-title mt-4">syntax of Array</h4>
+                <div class="card-body">
+                    <pre class="bg-light p-3 rounded"><code>let arrayName = [
+    value1,
+    value2,
+    // ...
+];
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Example of Array -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-danger text-white">5. Example of Array</h2>
+            <div class="card-body">
+                <pre class="bg-light p-3 rounded"><code>var fruits = ["apple", "banana", "orange", "grape"];</code></pre>
+
+                <h4 class="card-title mt-4">Accessing Array Elements</h4>
+                <pre class="bg-light p-3 rounded"><code>console.log(fruits[0]);   // "apple"
+console.log(fruits[1]);   // "banana"</code></pre>
+
+                <h4 class="card-title mt-4">Modifying Array Elements</h4>
+                <pre class="bg-light p-3 rounded"><code>fruits[0] = "pear";
+fruits[1] = "mango";
+console.log(fruits);</code></pre>
+                <h4 class="card-title mt-4">Adding a New Element</h4>
+                <pre class="bg-light p-3 rounded"><code>fruits.push("Lemon");  // add new element to the end of the array
+fruits.unshift("Strawberry"); // add new element to the beginning of the array
+fruits.splice(2, 0, "Grapes"); // add new element at index 2 (add, remove, "element")</code></pre>
+                <h4 class="card-title mt-4">Deleting an Element</h4>
+                <pre class="bg-light p-3 rounded"><code>fruits.pop(); // remove the last element
+fruits.shift(); // remove the first element
+fruits.splice(2, 1); // remove element at index 2 (indes, remove, add)
+console.log(fruits);</code></pre>
+            </div>
+        </div>
+        
+        <!-- Section 6: Iterating Over Arrays -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-secondary text-white">6. Iterating Over Arrays</h2>
+            <div class="card-body">
+                <p>You can loop through array elements in several ways.</p>
+
+                <h4 class="card-title mt-4">for loop</h4>
+                <p>The traditional way to loop, giving you access to the index <code>i</code>.</p>
+                <pre class="bg-light p-3 rounded"><code>var fruits = ["apple", "banana", "orange"];
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}</code></pre>
+
+                <h4 class="card-title mt-4">forEach loop</h4>
+                <p>A modern, cleaner method available on arrays.</p>
+                <pre class="bg-light p-3 rounded"><code>var fruits = ["apple", "banana", "orange"];
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});</code></pre>
+
+                <h4 class="card-title mt-4">for...of loop</h4>
+                <p>Another modern and very readable way to loop over iterable values like arrays.</p>
+                <pre class="bg-light p-3 rounded"><code>var fruits = ["apple", "banana", "orange"];
+for (var fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+            </div>
+        </div>
+
+    </div>
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </button>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2024 KLS COMPUTER JavaScript Lessons</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("backToTopBtn");
+
+        // When the user scrolls down 200px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <script src="lesson_5.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">JS Learning Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_1/practice/Lesson_1.html">Lesson 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_2/practice/Lesson_2.html">Lesson 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../Lesson_3/practice/Lesson_3.html">Lesson 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_4/practice/Lesson_4.html">Lesson 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_5/practice/Lesson_5.html">Lesson 5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_6/practice/Lesson_6.html">Lesson 6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Lesson_7/practice/Lesson_7.html">Lesson 7</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5 text-primary">Lesson 3: Control Flow</h1>
+
+        <!-- Section 1: control flow statements -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-primary text-white">1. Control Flow Statements</h2>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Control flow means how JavaScript decides which code to run, and when.</li>
+                    <li class="list-group-item">It includes conditions and loops.</li>
+                    <li class="list-group-item">Control flow has 3 types:
+                        <ul>
+                            <b>
+                            <li>Conditional statements</li>
+                            <li>Iteration (Loops) statements</li>
+                            <li>Jump statements</li>
+                            </b>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2: Conditional statements -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-success text-white">2. Conditional Statements</h2>
+            <div class="card-body">
+                <p>Conditional statements are used to perform different actions based on different conditions.</p>
+                <p>There are 4 types of conditional statements in JavaScript:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">if statement</li>
+                    <li class="list-group-item">if...else statement</li>
+                    <li class="list-group-item">if...else if...else statement</li>
+                    <li class="list-group-item">switch statement</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: if statement -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-info text-dark">3. if statement</h2>
+            <div class="card-body">
+                <p>The if statement is used to execute a block of code if a specified condition is true.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>if (condition) {
+    // code to be executed if condition is true
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let x = 10;
+if (x > 5) {
+    console.log("x is greater than 5");
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 4: if...else statement -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-warning text-dark">4. if...else statement</h2>
+            <div class="card-body">
+                <p>The if...else statement is used to execute a block of code if a specified condition is true, and another block of code if the condition is false.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>if (condition) {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let x = 10;
+if (x > 5) {
+    console.log("x is greater than 5");
+} else {
+    console.log("x is less than or equal to 5");
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 5: if...else if...else statement -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-danger text-white">5. if...else if...else statement</h2>
+            <div class="card-body">
+                <p>The if...else if...else statement is used to execute different blocks of code based on different conditions.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>if (condition1) {
+    // code to be executed if condition1 is true
+} else if (condition2) {
+    // code to be executed if condition1 is false and condition2 is true
+} else {
+    // code to be executed if both condition1 and condition2 are false
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let x = 10;
+if (x > 20) {
+    console.log("x is greater than 20");
+} else if (x > 10) {
+    console.log("x is greater than 10");
+} else {
+    console.log("x is less than or equal to 10");
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 6: switch statement -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-secondary text-white">6. switch statement</h2>
+            <div class="card-body">
+                <p>The switch statement is used to execute different blocks of code based on different values of a variable.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>switch (expression) {
+    case value1:
+        // code to be executed if expression is equal to value1
+        break;
+    case value2:
+        // code to be executed if expression is equal to value2
+        break;
+    // ...
+    default:
+        // code to be executed if none of the above cases match
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("Today is Monday");
+        break;
+    case "Tuesday":
+        console.log("Today is Tuesday");
+        break;
+    case "Wednesday":
+        console.log("Today is Wednesday");
+        break;
+    case "Thursday":
+        console.log("Today is Thursday");
+        break;
+    case "Friday":
+        console.log("Today is Friday");
+        break;
+    case "Saturday":
+        console.log("Today is Saturday");
+        break;
+    case "Sunday":
+        console.log("Today is Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 7: Iteration(Loops) statements -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-primary text-white">7. Iteration (Loops) Statements</h2>
+            <div class="card-body">
+                <p>Iteration (Loops) statements are used to repeat a block of code multiple times.</p>
+                <p>There are five types of iteration statements in JavaScript:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">for loop</li>
+                    <li class="list-group-item">while loop</li>
+                    <li class="list-group-item">do...while loop</li>
+                    <li class="list-group-item">for...of loop</li>
+                    <li class="list-group-item">for...in loop</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 8: for loop -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-success text-white">8. for loop</h2>
+            <div class="card-body">
+                <p>The for loop is used to repeat a block of code a specific number of times.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>for (initialization; condition; increment/decrement) {
+    // code to be executed
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 9: while loop -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-info text-dark">9. while loop</h2>
+            <div class="card-body">
+                <p>The while loop is used to repeat a block of code as long as a specified condition is true.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>while (condition) {
+    // code to be executed
+}</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 10: do-while loop -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-warning text-dark">10. do-while loop</h2>
+            <div class="card-body">
+                <p>The do-while loop is similar to the while loop, but it executes the code inside the loop at least once, even if the condition is false.</p>
+                <h4 class="card-title mt-4">Syntax:</h4>
+                <pre class="bg-light p-3 rounded"><code>do {
+    // code to be executed
+} while (condition);</code></pre>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 11: for...of loop -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-danger text-white">11. for...of loop</h2>
+            <div class="card-body">
+                <p>The for...of loop is used to iterate over iterable objects, such as arrays, strings, maps, and sets.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let fruits = ['apple', 'banana', 'orange'];
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 12: for...in loop -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-secondary text-white">12. for...in loop</h2>
+            <div class="card-body">
+                <p>The for...in loop is used to iterate over the enumerable properties of an object.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>let person = { name: 'John', age: 30, city: 'New York' };
+for (let property in person) {
+    console.log(property + ': ' + person[property]);
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 13: Jump statements -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-dark text-white">13. Jump Statements</h2>
+            <div class="card-body">
+                <p>Jump statements are used to control the flow of execution in a program.</p>
+                <p>There are four jump statements in JavaScript:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">break</li>
+                    <li class="list-group-item">continue</li>
+                    <li class="list-group-item">return</li>
+                    <li class="list-group-item">throw</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 14: break -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-primary text-white">14. break</h2>
+            <div class="card-body">
+                <p>The break statement is used to exit a loop or switch statement.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break;
+    }
+    console.log(i);
+}</code></pre>
+                <h4 class="card-title mt-4">Output:</h4>
+                <pre class="bg-light p-3 rounded"><code>0
+1
+2
+3
+4</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 15: continue -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-success text-white">15. continue</h2>
+            <div class="card-body">
+                <p>The continue statement is used to skip the rest of the code in the current iteration of a loop and continue with the next iteration.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue;
+    }
+    console.log(i);
+}</code></pre>
+                <h4 class="card-title mt-4">Output:</h4>
+                <pre class="bg-light p-3 rounded"><code>0
+1
+2
+3
+4
+6
+7
+8
+9</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 16: return -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-info text-dark">16. return</h2>
+            <div class="card-body">
+                <p>The return statement is used to exit a function and optionally return a value.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>function add(a, b) {
+    return a + b;
+}
+console.log(add(2, 3));</code></pre>
+                <h4 class="card-title mt-4">Output:</h4>
+                <pre class="bg-light p-3 rounded"><code>5</code></pre>
+            </div>
+        </div>
+
+        <!-- Section 17: throw -->
+        <div class="card mb-4">
+            <h2 class="card-header bg-warning text-dark">17. throw</h2>
+            <div class="card-body">
+                <p>The throw statement is used to throw an exception.</p>
+                <h4 class="card-title mt-4">Example:</h4>
+                <pre class="bg-light p-3 rounded"><code>try {
+    throw new Error("Something went wrong");
+} catch (error) {
+    console.log(error.message);
+}</code></pre>
+                <h4 class="card-title mt-4">Output:</h4>
+                <pre class="bg-light p-3 rounded"><code>Something went wrong</code></pre>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2024 KLS COMPUTER JavaScript Lessons</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("backToTopBtn");
+
+        // When the user scrolls down 200px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <script src="lesson_3.js"></script>
+</body>
+</html>

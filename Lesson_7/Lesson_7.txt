@@ -1,0 +1,145 @@
+Lesson 7 : JavaScript Events & DOM (Document Object Model)
+
+1. What is DOM?
+    + DOM (Document Object Model) is a tree-like structure that represents your HTML page. 
+    + JavaScript can use the DOM to:
+        - Change text, images, and styles dynamically.
+        - Read content from a web page.
+        - Add or remove elements from a web page.
+        - React to user actions.
+    + Example HTML: 
+        <h1 id="title">Hello</h1>
+        <button id="btn">Click Me</button>
+    + Example JavaScript:
+        const title = document.getElementById("title");
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            title.innerText = "Hello World";
+        });
+
+2. Accessing HTML Elements
+    + You can access HTML elements using JavaScript in several ways:
+    + Modern Methods (Recommended)
+        // Selects the first element that matches the CSS selector
+        let firstItem = document.querySelector('.list-item');
+
+        // Selects the element with the ID 'main-title'
+        let title = document.querySelector('#main-title');
+
+        // Selects ALL elements that match the CSS selector (returns a NodeList)
+        let allItems = document.querySelectorAll('.list-item');  
+    + Older Methods
+        // Selects the element with the ID 'main-title'
+        let titleById = document.getElementById('main-title');
+
+        // Selects all elements with the class 'list-item' (returns an HTMLCollection)
+        let itemsByClass = document.getElementsByClassName('list-item');
+
+        // Selects all 
+        elements (returns an HTMLCollection)
+        let itemsByTag = document.getElementsByTagName('li');
+
+3. Changing Content and Style
+    + You can change the content and style of HTML elements using JavaScript:
+    + Example HTML :
+        <h1 id="main-title">Hello, World!</h1>
+        <ul>
+            <li class="list-item">Item 1</li>
+            <li class="list-item">Item 2</li>
+            <li class="list-item">Item 3</li>
+        </ul>
+    + Example JavaScript:
+        // Select the element with the ID 'main-title'
+        let title = document.querySelector('#main-title');
+
+        // Change the text content of the element
+        title.textContent = 'Hello, JavaScript!';
+
+        // Change the style of the element
+        title.style.color = 'blue';
+        title.style.fontSize = '24px';
+
+4. Event Listeners
+    + You can add event listeners to HTML elements to respond to user interactions:
+    + Example HTML :
+        <button id="myButton">Click me!</button>
+    + Example JavaScript:
+        // Select the button element
+        let button = document.querySelector('#myButton');
+
+        // Add an event listener for the 'click' event
+        button.addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+
+5. DOM Manipulation
+    + You can manipulate the DOM by adding, removing, and modifying elements:
+    + Example HTML:
+        <ul id="myList">
+            <li class="list-item">Item 1</li>
+            <li class="list-item">Item 2</li>
+            <li class="list-item">Item 3</li>
+        </ul>
+    + Example JavaScript:
+        // Select the list element
+        let list = document.querySelector('#myList');
+        // Add a new list item
+        let newItem = document.createElement('li');
+        newItem.textContent = 'Item 4';
+        list.appendChild(newItem);
+
+        // Remove the first list item
+        list.removeChild(list.firstChild);
+
+        // Change the text of the second list item
+        list.children[1].textContent = 'Updated Item 2';
+6. Event Propagation
+    + Event propagation is the process of how events are handled in the DOM.
+    + There are three phases of event propagation:
+        1. Capturing phase: The event starts from the window and propagates down to the target element.
+        2. Target phase: The event reaches the target element.
+        3. Bubbling phase: The event bubbles up from the target element to the window.
+    + Example HTML:
+        <div id="parent">
+            <button id="child">Click me</button>
+        </div>
+    + Example JavaScript:
+        // Select the parent and child elements
+        let parent = document.querySelector('#parent');
+        let child = document.querySelector('#child');
+
+        // Add event listeners for the capturing and bubbling phases
+        parent.addEventListener('click', function(event) {
+            console.log('Parent element clicked');
+        }, true); // true for capturing phase
+
+        child.addEventListener('click', function(event) {
+            console.log('Child element clicked');
+        }, false); // false for bubbling phase
+
+        // Stop event propagation
+        child.addEventListener('click', function(event) {
+            event.stopPropagation();
+        }, false);
+
+7. Changing HTML Dynamically
+    + Example HTML :
+        <div id="container">
+            <p id="text">Hello, World!</p>
+        </div>
+    + Example JavaScript:
+        // Select the container and text elements
+        let container = document.querySelector('#container');
+        let text = document.querySelector('#text');
+
+        // Change the text content of the text element
+        text.textContent = 'Hello, JavaScript!';
+
+        // Add a new element to the container
+        let newElement = document.createElement('p');
+        newElement.textContent = 'This is a new element';
+        container.appendChild(newElement);
+
+        // Remove the text element from the container
+        container.removeChild(text);
+

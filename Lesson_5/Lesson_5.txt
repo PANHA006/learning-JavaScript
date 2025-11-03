@@ -1,0 +1,130 @@
+Lesson 5 : Object & Arrays in JavaScript
+
+1. Object
+    - Object is a collection of key-value pair
+    - Key is always a string
+    - Value can be any data type
+    - Object is created using {}
+    - Object can be accessed using dot notation or bracket notation
+
+2. Example of Object
+    var person = {
+        name: "John",
+        age: 30,
+        gender: "male",
+        isMarried: false,
+        children: ["Alice", "Bob"],
+        address: {
+            street: "123 Main St",
+            city: "New York",
+            state: "NY",
+            zip: "10001"
+        }
+    };
+
+    + Accessing Object
+        person.name
+        person["name"]
+        person.age
+        person["age"]
+    + Modifying Object
+        person.name = "Jane"
+        person["name"] = "Jane"
+        person.age = 25
+        person["age"] = 25
+    + Adding new property
+        person.email = "jane@example.com"
+        person["email"] = "jane@example.com"
+        person.phone = "123-456-7890"
+        person["phone"] = "123-456-7890"
+    + Deleting property
+        delete person.gender
+
+3. Real Example
+    + var person = {
+        name: "John",
+        age: 30,
+        gender: "male",
+        isMarried: false,
+        children: ["Alice", "Bob"],
+        address: {
+            street: "123 Main St",
+            city: "New York",
+            state: "NY",
+            zip: "10001"
+        }
+    };
+    + Accessing Object
+        person.name
+        person.age
+        person.gender
+        person.isMarried
+        person.children[0]
+        person.children[1]
+        person.address.street
+        person.address.city
+        person.address.state
+        person.address.zip
+    + Modifying Object
+        person.name = "Jane"
+        person.age = 25
+        person.gender = "female"
+        person.isMarried = true
+        person.children[0] = "Emily"
+        person.children[1] = "Michael"
+        person.address.street = "456 Elm St"
+        person.address.city = "Los Angeles"
+        person.address.state = "CA"
+        person.address.zip = "90001"
+    + Adding new property
+        person.email = "jane@example.com"
+        person.phone = "123-456-7890"
+    + Deleting property
+        delete person.email
+        delete person.phone
+
+4. Arrays
+    - An array stores multiple values in a single variable.
+    - Array is a collection of values
+    - Array is created using []
+
+5. Example of Array
+    + var fruits = ["apple", "banana", "orange", "grape"];
+    + Accessing Array
+        fruits[0]
+        fruits[1]
+        fruits[2]
+        fruits[3]
+    + Modifying Array
+        fruits[0] = "pear"
+        fruits[1] = "mango"
+    + Adding new element
+        fruits.push("kiwi")
+    + Deleting element
+        fruits.pop()
+
+6. Iterating Over Arrays
+    + for loop
+        for (var i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+    + Example of for loop
+        for (var i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+    + forEach loop
+        fruits.forEach(function(fruit) {
+            console.log(fruit);
+        });
+    + Example of forEach loop
+        fruits.forEach(function(fruit) {
+            console.log(fruit);
+        });
+    + for...of loop
+        for (var fruit of fruits) {
+            console.log(fruit); 
+        }
+    + Example of for...of loop
+        for (var fruit of fruits) {
+            console.log(fruit);
+        }

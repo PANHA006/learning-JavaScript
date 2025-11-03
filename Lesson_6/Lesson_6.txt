@@ -1,0 +1,144 @@
+Lesson 6 : Functions with Arrays & Objects in JavaScript
+
+1. Why Use Functions with Arrays & Objects?
+    + Because in real programs, you often:
+        - Pass arrays or objects into functions as data.
+        - Process them (calculate, search, modify).
+        - Return results from functions.
+        - Use the results in your program.
+
+2. Passing an Array to a Function
+    + When you pass an array to a function, you are passing a reference to the array, not a copy of the array.
+    + This means that the function can modify the array, and those changes will be reflected in the original array.
+    + Example:
+        function printArray(arrs) {
+            for (let arr of arrs) {
+                console.log(arr);
+            }
+        }
+        let myArray = [1, 2, 3, 4, 5];
+        printArray(myArray);
+
+3. Sum All Numbers in an Array
+    + Write a function that takes an array of numbers as an argument and returns the sum of all the numbers in the array.
+    + Example:
+        function sumArray(arr) {
+            let sum = 0;
+            for (let num of arr) {
+                sum += num;
+            }
+            return sum;
+        }
+        let myArray = [1, 2, 3, 4, 5];
+        console.log(sumArray(myArray)); // Output: 15
+
+4. Find Maximum Number in an Array
+    + Write a function that takes an array of numbers as an argument and returns the maximum number in the array.
+    + Example:
+        function findMax(arr) {
+            let max = arr[0];
+            for (let num of arr) {
+                if (num > max) {
+                    max = num;
+                }
+            }
+            return max;
+        }
+        let myArray = [1, 2, 3, 4, 5];
+        console.log(findMax(myArray)); // Output: 5
+
+5. Passing Objects to Functions
+    + Write a function that takes an object as an argument and returns the sum of all the values in the object.
+    + Example:
+        function sumObject(obj) {
+            let sum = 0;
+            for (let key in obj) {
+                sum += obj[key];
+            }
+            return sum;
+        }
+        let myObject = {a: 1, b: 2, c: 3};
+        console.log(sumObject(myObject)); // Output: 6
+
+6. Returning an Object from a Function
+    + Write a function that takes two numbers as arguments and returns an object with the result of the calculation.
+    + Example:
+        function calculate(num1, num2) {
+            return {
+                sum: num1 + num2,
+                subtraction: num1 - num2,
+                motiplication: num1 * num2,
+                division: num1 / num2
+            };
+        }
+        let result = calculate(10, 5);
+        console.log(result); // Output: { sum: 15, difference: 5, product: 50, quotient: 2 }
+
+7. Array of Objects Example
+    + Write a function that takes an array of objects as an argument and returns the object with the largest value for a specified property.
+    + Example:
+        let students = [
+            { name: "Bannya", score: 85 },
+            { name: "Sok", score: 74 },
+            { name: "Dara", score: 91 }
+        ];
+        function showHightScore(students) {
+            let maxScore = students[0].score;
+            let maxScoreStudent = students[0];
+            for (let max of students) {
+                if (max.score > maxScore) {
+                    maxScore = max.score;
+                    maxScoreStudent = max;
+                }
+            }
+            return maxScoreStudent;
+        }
+        let result = showHightScore(students);
+        console.log(result); // Output: { name: "Dara", score: 91 }
+
+8. Modify Data Inside a Function
+    + Write a function that takes an array of numbers as an argument and modifies the array by adding 1 to each element.
+    + Example:
+        let numbers = [1, 2, 3, 4, 5];
+        function addOne(numbers) {
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i] += 1;
+            }
+        }
+        addOne(numbers);
+        console.log(numbers); // Output: [2, 3, 4, 5, 6]
+
+9. Functions Returning Arrays
+    + Write a function that takes an array of numbers as an argument and returns a new array with only the even numbers.
+    + Example:
+        let numbers = [1, 2, 3, 4, 5, 6];
+        function filterEven(numbers) {
+            let evenNumbers = [];
+            for (let number of numbers) {
+                if (number % 2 === 0) {
+                    evenNumbers.push(number);
+                }
+            }
+            return evenNumbers;
+        }
+        let result = filterEven(numbers);
+        console.log(result); // Output: [2, 4, 6]
+
+10. Practice Example – Student Average Function
+    + Write a function that takes an array of student objects as an argument and returns the average grade of all students.
+    + Example:
+        let students = [
+            { name: "John", grade: 85 },
+            { name: "Jane", grade: 90 },
+            { name: "Bob", grade: 75 },
+            { name: "Alice", grade: 95 },
+        ];
+        function calculateAverageGrade(students) {
+            let sum = 0;
+            for (let student of students) {
+                sum += student.grade;
+            }
+            return sum / students.length; // or students.length
+        }
+        let averageGrade = calculateAverageGrade(students);
+        console.log(averageGrade); // Output: 85.75
