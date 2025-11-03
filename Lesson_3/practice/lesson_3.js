@@ -1,1 +1,0 @@
-console.log("Lesson 3 JavaScript file loaded.");
